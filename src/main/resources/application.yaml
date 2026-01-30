@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: my-car-service
+
+  profiles:
+    active: ${MY_PROFILE_NAME:dev}
+
+  datasource:
+    url: jdbc:postgresql://${HOST}:${PORT:5432}/${DB_NAME}?currentSchema=${SCHEMA}
+    driver-class-name: org.postgresql.Driver
+    username: ${USERNAME}
+    password: ${PAROL}
+    hikari:
+      minimum-idle: 2
+      idle-timeout: 40000
+      maximum-pool-size: 10
+      connection-timeout: 10000
+      keepalive-time: 30000
+      schema: ${SCHEMA}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog.yaml
+
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  servlet:
+    context-path: /api-car

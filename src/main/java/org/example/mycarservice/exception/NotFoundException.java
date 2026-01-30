@@ -1,0 +1,14 @@
+package org.example.mycarservice.exception;
+
+import lombok.Getter;
+
+@Getter
+public class NotFoundException extends RuntimeException {
+    private final String code;
+    private String message;
+
+    public NotFoundException(String code, String message) {
+        super(message);
+        this.code = code;
+    }
+}
