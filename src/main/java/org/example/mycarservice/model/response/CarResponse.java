@@ -19,6 +19,7 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE)
 public class CarResponse {
     Long id;
+
     String vin;
 
     String registrationNumber;

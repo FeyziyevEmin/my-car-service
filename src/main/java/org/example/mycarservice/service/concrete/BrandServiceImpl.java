@@ -62,6 +62,7 @@ public class BrandServiceImpl implements BrandService {
 
     private BrandEntity fetchBrandIfExist(Long id) {
         return brandRepository.findById(id).orElseThrow(() ->
-                new NotFoundException(ExceptionConstants.BRAND_NOT_FOUND.getCode(), ExceptionConstants.BRAND_NOT_FOUND.getMessage()));
+                new NotFoundException(ExceptionConstants.BRAND_NOT_FOUND.getCode(),
+                                      ExceptionConstants.BRAND_NOT_FOUND.getMessage()));
     }
 }

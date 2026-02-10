@@ -15,9 +15,14 @@ import static lombok.AccessLevel.PRIVATE;
 @Builder
 @FieldDefaults(level = PRIVATE)
 public class BrandResponse {
+
     Integer id;
+
     String name;
+
     String country;
+
     Status status;
+
     List<ModelResponse> models;
 }

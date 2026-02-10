@@ -17,6 +17,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Builder
 @FieldDefaults(level = PRIVATE)
 public class FeatureResponse {
+
     Integer id;
 
     String name;

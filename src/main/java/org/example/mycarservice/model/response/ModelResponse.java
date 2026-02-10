@@ -20,6 +20,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Builder
 @FieldDefaults(level = PRIVATE)
 public class ModelResponse {
+
     Integer id;
 
     String modelName;

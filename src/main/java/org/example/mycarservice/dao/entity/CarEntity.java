@@ -22,7 +22,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class CarEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    Long id;
 
     String vin;
 

@@ -16,6 +16,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Builder
 @FieldDefaults(level = PRIVATE)
 public class CarDetailResponse {
+
     Integer id;
 
     String engineNumber;
